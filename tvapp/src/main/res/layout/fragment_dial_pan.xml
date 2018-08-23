@@ -1,0 +1,95 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:id="@+id/newzonghe_lyd"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView
+            android:background="#fff"
+            android:id="@+id/listview"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"></ListView>
+        <ScrollView
+            android:background="#fff"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+
+        >
+            <RelativeLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/show_details"
+                    android:textColor="#000"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="储兵兵今天睡觉了."/>
+                <View
+                    android:id="@+id/tv_view"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/show_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#999"/>
+                <com.sample.tv.util.MyGridView
+                    android:layout_below="@+id/tv_view"
+                    android:id="@+id/gridview_hor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnWidth="20dp"
+                    android:numColumns="3"
+                    android:background="#fff"
+                    android:horizontalSpacing="10dp"
+                    android:verticalSpacing="10dp"
+                    android:stretchMode="columnWidth"
+                    android:gravity="center"
+
+                    >
+                </com.sample.tv.util.MyGridView>
+                <EditText
+                    android:textColor="#222"
+                    android:background="@drawable/border"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@+id/gridview_hor"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    />
+            </RelativeLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:background="#000"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <com.sample.tv.util.MyGridView
+                android:id="@+id/gridview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:columnWidth="20dp"
+                android:numColumns="2"
+                android:background="#fff"
+                android:horizontalSpacing="10dp"
+                android:verticalSpacing="10dp"
+                android:stretchMode="columnWidth"
+                android:gravity="center"
+                android:layout_marginBottom="10dp"
+                >
+            </com.sample.tv.util.MyGridView>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
